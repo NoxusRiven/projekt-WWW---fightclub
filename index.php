@@ -21,7 +21,8 @@
         <nav>
             <a href="spolecznosc.php">Forum społecznościowe</a>
             <a href="obstawy.php">Głosowanie</a>
-            <a href="naszeRzeczy.php">Nasze osiągnięcia</a>
+            <a href="waszeOsiagniecia.php">Wasze osiągnięcia</a>
+            <a href="sparingi">Amatorskie walki</a>
         </nav>
     </header>
     <main>
