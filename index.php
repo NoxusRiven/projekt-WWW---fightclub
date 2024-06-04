@@ -30,8 +30,9 @@
             <h2>Witamy w Fightclub</h2>
             <p>Jest to strona dla miłośników sztuk walki w którym można znaleźć informacje o najciekawszych eventach w świecie walk, rozmiawiać z innymi użytkownikami i wiele innych ciekawych rzeczy dla osób inretesujących się sztukami walki</p>
         </div>
+        <a href="addEventInfo.php">Dodaj wydarzenie</a>
         <div class="eventy">
-            <h2>Eventy w świecie walki</h2>
+            <h2>Wyderzenia w świecie walki</h2>
             <div>
                 <p>1. Walka Mike'a Tysona z Jake'm Paulem</p>
                 <p>Data: 20 lipca 2024</p>
