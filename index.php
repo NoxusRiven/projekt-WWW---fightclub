@@ -8,37 +8,56 @@
 </head>
 <body>
     <?php
-        session_start();
         require ("session.php");
         require("database.php");
     ?>
-    
-    <!DOCTYPE html>
     <header>
         <p>Zalogowany jako: <?= $_SESSION["login"] ?></p>
         <nav><a href="logout.php">Wyloguj</a></nav>
         <h1>Fightclub</h1>
         <nav>
-            <a href="spolecznosc.php">Forum społecznościowe</a>
-            <a href="obstawy.php">Głosowanie</a>
-            <a href="waszeOsiagniecia.php">Wasze osiągnięcia</a>
-            <a href="sparingi">Amatorskie walki</a>
+            <a href="index.php">Strona głowna</a>
+            <a href="community.php">Forum społecznościowe</a>
+            <a href="bets.php">Głosowanie</a>
+            <a href="yourAchivments.php">Wasze osiągnięcia</a>
+            <a href="fights.php">Amatorskie walki</a>
         </nav>
     </header>
     <main>
         <div class="wstep">
-            <h2>Witamy w Fightclub</h2>
+            <h1>Witamy w Fightclub</h1>
             <p>Jest to strona dla miłośników sztuk walki w którym można znaleźć informacje o najciekawszych eventach w świecie walk, rozmiawiać z innymi użytkownikami i wiele innych ciekawych rzeczy dla osób inretesujących się sztukami walki</p>
         </div>
-        <a href="addEventInfo.php">Dodaj wydarzenie</a>
+
         <div class="eventy">
-            <h2>Wyderzenia w świecie walki</h2>
-            <div>
-                <p>1. Walka Mike'a Tysona z Jake'm Paulem</p>
-                <p>Data: 20 lipca 2024</p>
-                <img src="jake x Tyson.jpg" alt="">
-            </div>
+            <h1>Wyderzenia w świecie walki</h1>
+            <a href="addEventInfoForm.php">Dodaj wydarzenie</a>
+                <?php
+                    $sql = "SELECT zdjecie, tytul, data FROM wydarzenia";
+                    $result = $conn->query($sql);
+                    $index = 1;
+
+                    if($result->num_rows > 0)
+                    {
+                        
+                        while($row = $result->fetch_object())
+                        {
+                            echo "<div>";
+                            echo "<p>$index. {$row->tytul}</p>";
+                            echo "<p>Data: {$row->data}</p>";
+                            echo "<p><img src='{$row->zdjecie}'></p>";
+                            echo "</div>";
+                            $index++;
+                        }
+                    }
+                    else
+                    {
+                        echo "<p>Brak wydarzeń</p>";
+                    }
+                    $conn->close();
+                ?>
         </div>
+        
     </main>
     <footer>
         <p><b>Informacje o właścicielu strony:</b></p>
