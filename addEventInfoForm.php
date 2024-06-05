@@ -9,7 +9,6 @@
 <body>
     <main>
         <div class="form">
-        <a href="index.php" class="button">Powrót do strony</a>
             <form action="addEventInfo.php" method="post">
                 <p>Zdjęcie</p>
                 <input type="file" name="zdjecie" class="file">
@@ -19,6 +18,7 @@
                 <input type="text" name="data" class="input">
                 <input type="submit" value="Dodaj wydarzenie" class="button">
             </form>
+            <p><a href="index.php" class="button">Powrót do strony</a></p>
         </div>
     </main>
 </body>

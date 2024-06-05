@@ -11,7 +11,7 @@
         $result = $conn->query($sql);
         if ($result->num_rows == 1) 
         {
-            $login = $_SESSION["login"];
+            $_SESSION["login"] = $login;
             header("Location: index.php");
         } 
         else 

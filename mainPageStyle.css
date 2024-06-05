@@ -95,50 +95,34 @@ footer
 {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
-    /*text-align: center;*/
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
-footer p {
+footer p 
+{
     margin: 0;
     font-size: 14px;
     color: #bbbbbb;
 }
 
-/*button {
-    padding: 10px 20px;
-    background-color: #f0ad4e;
-    border: none;
-    border-radius: 5px;
-    color: #1c1c1c;
-    font-size: 16px;
-    cursor: pointer;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-button:hover {
-    background-color: #ec971f;
-}*/
-
 .wstep, .eventy, .form 
 {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    margin: 10px 0; /* Margines między sekcjami */
+    margin: 10px 0;
     border-radius: 10px;
     width: 100%;
     max-width: 800px;
 }
 
-form
+/*form
 {
     color: #f0ad4e;
     text-decoration: none;
     font-weight: bold;
     margin: 0 15px;
     text-transform: uppercase;
-}
+}*/
 
 .input {
     width: calc(60% - 20px);
@@ -159,6 +143,7 @@ form
     border-radius: 5px;
     box-sizing: border-box;
 }
+
 .button
 {
     width: 50%;
@@ -177,10 +162,6 @@ form
     background-color: #f59209;
 }
 
-.post-toggle
-{
-    display: none;
-}
 
 .post-button
 {
@@ -198,4 +179,50 @@ form
 .post-button:hover 
 {
     background-color: #b96f08;
+}
+
+.buttons
+{
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.button-comment
+{
+    width: 13%;
+    padding: 5px;
+    background-color: #e05d29;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.button-comment:hover 
+{
+    background-color: #be3f04;
+}
+
+.input-comment
+{
+    resize: none;
+    width: 30%;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    box-sizing: border-box; 
+}
+
+.comment-container
+{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
