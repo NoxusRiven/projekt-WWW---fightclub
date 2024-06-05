@@ -140,8 +140,8 @@ form
     text-transform: uppercase;
 }
 
-.addEvent-input {
-    width: calc(100% - 20px);
+.input {
+    width: calc(60% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #dddddd;
@@ -149,7 +149,7 @@ form
     box-sizing: border-box;
 }
 
-.addEvent-file 
+.file 
 {
     width: calc(40% - 20px);
     height: 50px;
@@ -159,7 +159,7 @@ form
     border-radius: 5px;
     box-sizing: border-box;
 }
-.addEvent-button
+.button
 {
     width: 50%;
     padding: 10px;
@@ -172,8 +172,30 @@ form
     margin-top: 10px;
 }
 
-.addEvent-button:hover 
+.button:hover 
 {
     background-color: #f59209;
 }
 
+.post-toggle
+{
+    display: none;
+}
+
+.post-button
+{
+    width: 22%;
+    padding: 10px;
+    background-color: #e6931f;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.post-button:hover 
+{
+    background-color: #b96f08;
+}

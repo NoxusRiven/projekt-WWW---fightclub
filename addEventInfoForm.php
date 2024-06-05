@@ -8,15 +8,16 @@
 </head>
 <body>
     <main>
-    
         <div class="form">
-        <a href="index.php" class="addEvent-button">Powrót do strony</a>
+        <a href="index.php" class="button">Powrót do strony</a>
             <form action="addEventInfo.php" method="post">
                 <p>Zdjęcie</p>
-                <input type="file" name="zdjecie" class="addEvent-file">
-                <p>Tytuł<input type="text" name="tytul" class="addEvent-input"></p>
-                <p>Data<input type="text" name="data" class="addEvent-input"></p>
-                <input type="submit" value="Dodaj wydarzenie" class="addEvent-button">
+                <input type="file" name="zdjecie" class="file">
+                <p>Tytuł</p>
+                <input type="text" name="tytul" class="input">
+                <p>Data</p>
+                <input type="text" name="data" class="input">
+                <input type="submit" value="Dodaj wydarzenie" class="button">
             </form>
         </div>
     </main>

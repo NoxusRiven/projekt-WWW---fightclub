@@ -9,9 +9,19 @@
 <body>
     <?php
         require("session.php");
+        require("database.php");
     ?>
-    <form action="addPost.php" method="post">
-        <input type="hidden" name="nick" value="<?php $_SESSION["login"] //upewnij sie ze dobrze zrobione?>"> 
-    </form>
+    <main>
+        <div class="form">
+            <form action="addPost.php" method="post">
+                <input type="hidden" name="nick" value=<?php echo $_SESSION["login"]; ?>>
+                <p>Nagłówek</p>
+                <input type="text" name="naglowek" class="input">
+                <p>Treść wpisu</p>
+                <textarea name="tresc" cols="20" rows="10" class="input"></textarea>
+                <input type="submit" value="Dodaj wpis" class="button">
+            </form>
+        </div>
+    </main>
 </body>
 </html>
