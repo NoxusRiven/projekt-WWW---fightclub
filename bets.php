@@ -23,5 +23,32 @@
             <a href="fights.php">Amatorskie walki</a>
         </nav>
     </header>
+    <main>
+        <h1>Głosowanie zwycięsców walk</h1>
+
+        <?php
+            $sql = "SELECT osoba1, osoba2, liczbaGlosow1, liczbaGlosow2 FROM glosowanie";
+            $result = $conn->query($sql);
+
+                if($result->num_rows > 0)
+                {
+                    while($row = $result->fetch_object())
+                    {
+                        echo "<div>";                            
+                        echo "<p>{$row->osoba1}</p>";
+                        echo "<p>{$row->osoba2}</p>";
+                        echo "<p>{$row->liczbaGlosow1}</p>";
+                        echo "<p>{$row->liczbaGlosow2}</p>";
+                        echo "</div>";
+                        $index++;
+                    }
+                }
+                else
+                {
+                    echo "<p>Brak wydarzeń</p>";
+                }
+                $conn->close();
+        ?>
+    </main>
 </body>
 </html>
