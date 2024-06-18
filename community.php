@@ -5,34 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainPageStyle.css">
     <title>Społeczność</title>
-
-    <script>
-        function toggleContent(id) 
-        {
-            const content = document.getElementById('post-'+id);
-            if (content.style.display === 'none') 
-            {
-                content.style.display = 'block';
-            } 
-            else 
-            {
-                content.style.display = 'none';
-            }
-        }
-
-        function toggleComments(id) 
-        {
-            const content = document.getElementById('comment-'+id);
-            if (content.style.display === 'none') 
-            {
-                content.style.display = 'block';
-            } 
-            else 
-            {
-                content.style.display = 'none';
-            }
-        }
-    </script>
+    <script src="communityScript.js"></script>
 </head>
 <body>
     <?php
@@ -105,7 +78,9 @@
                         }
                         echo "</div>"; 
                     }
-                } else {
+                } 
+                else 
+                {
                     echo "<p>Brak wpisów</p>";
                 }
                 $conn->close();

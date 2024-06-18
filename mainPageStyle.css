@@ -115,15 +115,6 @@ footer p
     max-width: 800px;
 }
 
-/*form
-{
-    color: #f0ad4e;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 15px;
-    text-transform: uppercase;
-}*/
-
 .input {
     width: calc(60% - 20px);
     padding: 10px;
@@ -227,7 +218,26 @@ footer p
     gap: 10px;
 }
 
-.XDDDDDDDD
+.gap 
 {
-    color: black;
+    display: inline-block;
+    width: 50px;
+}
+
+.button-bet
+{
+    width: 10%;
+    padding: 10px;
+    background-color: #ee9922;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button-bet:hover
+{
+    background-color: #b96f08;
 }
