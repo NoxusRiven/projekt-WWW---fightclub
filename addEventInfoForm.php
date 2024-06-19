@@ -9,7 +9,7 @@
 <body>
     <main>
         <div class="form">
-            <form action="addEventInfo.php" method="post">
+            <form action="addEventInfo.php" method="post" enctype="multipart/form-data">
                 <p>Zdjęcie</p>
                 <input type="file" name="zdjecie" class="file">
                 <p>Tytuł</p>

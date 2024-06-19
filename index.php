@@ -45,7 +45,7 @@
                             echo "<div>";
                             echo "<p>$index. {$row->tytul}</p>";
                             echo "<p>Data: {$row->data}</p>";
-                            echo "<p><img src='{$row->zdjecie}'></p>";
+                            echo "<p><img src='Event_Images/{$row->zdjecie}'></p>";
                             echo "</div>";
                             $index++;
                         }
