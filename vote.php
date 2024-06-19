@@ -2,26 +2,71 @@
     require("session.php");
     require("database.php");
 
-    $liczbaGlosow = $_REQUEST["liczbaGlosow"];
+    $liczbaGlosow = intval($_REQUEST["liczbaGlosow"]) + 1;
     $idGlosowania = $_REQUEST["id"];
     $przycisk = $_REQUEST["button"];
+    $idUzytkownika = $_SESSION["id"];
 
-    echo "liczba glosow:", $liczbaGlosow;
-    echo "request id: ", $id;
-    echo "przycisk: ", $przycisk;
-    
-    if($przycisk == "button1")
+    // Sprawdzenie, czy użytkownik już głosował
+    $sql_check = "SELECT * FROM lista_glosujacych WHERE idGlosowania=$idGlosowania AND idUzytkownika=$idUzytkownika";
+    $result = $conn->query($sql_check);
+
+    if ($result && $result->num_rows == 0) 
     {
-        $sql = "UPDATE glosowanie SET liczbaGlosow1=$liczbaGlosow WHERE id=$idGlosowania";
-    }
-    else if($przycisk == "button2")
+        if ($przycisk == "button1") {
+            $sql = "UPDATE glosowanie SET liczbaGlosow1=$liczbaGlosow WHERE id=$idGlosowania";
+        } else if ($przycisk == "button2") {
+            $sql = "UPDATE glosowanie SET liczbaGlosow2=$liczbaGlosow WHERE id=$idGlosowania";
+        }
+
+        if ($conn->query($sql) === TRUE) {
+            echo $liczbaGlosow;
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        $sql_insert = "INSERT INTO lista_glosujacych (idGlosowania, idUzytkownika) VALUES ($idGlosowania, $idUzytkownika)";
+        if ($conn->query($sql_insert) !== TRUE) 
+        {
+            echo "Error: " . $sql_insert . "<br>" . $conn->error;
+        }
+    } 
+    else 
     {
-        $sql = "UPDATE glosowanie SET liczbaGlosow2=$liczbaGlosow WHERE id=$idGlosowania";
+        echo $liczbaGlosow-1;
     }
 
-    if ($conn->query($sql) !== TRUE) 
-    {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
     $conn->close();
+
+
+
+
+
+        
+        /*require("session.php");
+        require("database.php");
+
+        $liczbaGlosow = intval($_REQUEST["liczbaGlosow"])+1;
+        $idGlosowania = $_REQUEST["id"];
+        $przycisk = $_REQUEST["button"];
+
+        if($przycisk == "button1")
+        {
+            $sql = "UPDATE glosowanie SET liczbaGlosow1=$liczbaGlosow WHERE id=$idGlosowania";
+        }
+        else if($przycisk == "button2")
+        {
+            $sql = "UPDATE glosowanie SET liczbaGlosow2=$liczbaGlosow WHERE id=$idGlosowania";
+        }
+
+        if ($conn->query($sql) === TRUE) 
+        {
+            echo $liczbaGlosow;
+        }
+        else
+        {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        $conn->close();*/
+    
 ?>

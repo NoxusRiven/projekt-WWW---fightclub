@@ -47,6 +47,7 @@
                             echo "<button class='button-bet1'>Oddaj głos</button>";
                             echo "<span class='gap'></span>";
                             echo "<button class='button-bet2'>Oddaj głos</button>";
+                            //echo "<button class='button-back'>Cofnij głos</button>"
                             echo "</div>";
                         }
                     }
@@ -57,6 +58,7 @@
                     $conn->close();
             ?>
         </div>
+        
     </main>
 </body>
 </html>
