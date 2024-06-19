@@ -224,7 +224,7 @@ footer p
     width: 50px;
 }
 
-.button-bet
+.button-bet1, .button-bet2
 {
     width: 10%;
     padding: 10px;
@@ -237,7 +237,7 @@ footer p
     margin-top: 10px;
 }
 
-.button-bet:hover
+.button-bet1:hover, .button-bet2:hover
 {
     background-color: #b96f08;
 }
