@@ -16,7 +16,7 @@
         <nav><a href="logout.php">Wyloguj</a></nav>
         <h1>Fightclub</h1>
         <nav>
-            <a href="index.php">Strona głowna</a>
+            <a href="index.php" class="wybrany">Strona głowna</a>
             <a href="community.php">Forum społecznościowe</a>
             <a href="bets.php">Głosowanie</a>
             <a href="yourAchivments.php">Wasze osiągnięcia</a>

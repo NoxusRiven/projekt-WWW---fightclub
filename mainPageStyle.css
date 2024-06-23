@@ -58,6 +58,12 @@ nav a:hover
     text-decoration: underline;
 }
 
+nav a.wybrany
+{
+    color: #ec601f;
+    text-decoration: underline;
+}
+
 main
 {
     flex: 1;

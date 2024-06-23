@@ -22,7 +22,7 @@
         <nav>
             <a href="index.php">Strona głowna</a>
             <a href="community.php">Forum społecznościowe</a>
-            <a href="bets.php">Głosowanie</a>
+            <a href="bets.php" class="wybrany">Głosowanie</a>
             <a href="yourAchivments.php">Wasze osiągnięcia</a>
             <a href="fights.php">Amatorskie walki</a>
         </nav>
@@ -61,5 +61,13 @@
         </div>
         
     </main>
+    <footer>
+        <p><b>Informacje o właścicielu strony:</b></p>
+            <p><b>Imie i nazwisko:</b> Damian Woźny</p>
+            <p><b>Telefon:</b> 884805777</p>
+            <p><b>Email:</b></p>
+            <p>-prywatny: damianmdxvpc18@gmail.com</p>
+            <p>-szkolny: dw89246@stud.uws.edu.pl</p>   
+    </footer>
 </body>
 </html>
