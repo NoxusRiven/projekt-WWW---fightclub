@@ -12,7 +12,6 @@
     <?php
         require ("session.php");
         require("database.php");
-        /**/
     ?>
     <header>
         
@@ -27,16 +26,16 @@
             </div>
             
         </div>
-        
-    </header>
-    <main>
-    <nav>
+        <nav>
             <a href="index.php" class="wybrany">Strona głowna</a>
             <a href="community.php">Forum społecznościowe</a>
             <a href="bets.php">Głosowanie</a>
             <a href="yourAchivments.php">Wasze osiągnięcia</a>
             <a href="fights.php">Amatorskie walki</a>
         </nav>
+    </header>
+    <main>
+    
         <div class="wstep">
             <h1>Witamy w Fightclub</h1>
             <p>Jest to strona dla miłośników sztuk walki w którym można znaleźć informacje o najciekawszych eventach w świecie walk, rozmiawiać z innymi użytkownikami i wiele innych ciekawych rzeczy dla osób inretesujących się sztukami walki</p>

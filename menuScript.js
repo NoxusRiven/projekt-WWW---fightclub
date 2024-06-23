@@ -1,4 +1,4 @@
-$(document).ready(function() {
+gut$(document).ready(function() {
     $(".menuIcon").on("click", function(event) {
         $(".menu-list").toggleClass('active');
     });
