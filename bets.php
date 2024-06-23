@@ -39,15 +39,16 @@
                     {
                         while($row = $result->fetch_object())
                         {
-                            echo "<div class='bet'>";                            
+                            echo "<div class='bet' data-idGlosowania='$row->id'>";                            
                             echo "<p>{$row->osoba1}<span class='gap'></span>{$row->osoba2}</p>";
-                            echo "<p><span class='liczbaGlosow1' data-id='$row->id'>{$row->liczbaGlosow1}";
-                            echo "</span><span class='gap'></span>";
-                            echo "<span class='liczbaGlosow2' data-id='$row->id'>{$row->liczbaGlosow2}</span></p>";
+                            echo "<p><span class='liczbaGlosow1' data-id='$row->id' glosowalNa='$row->osoba1'>{$row->liczbaGlosow1}</span>";
+                            echo "<span class='gap'></span>";
+                            echo "<span class='liczbaGlosow2' data-id='$row->id' glosowalNa='$row->osoba2'>{$row->liczbaGlosow2}</span></p>";
+                            echo "<div class='buttonDiv'>";
                             echo "<button class='button-bet1'>Oddaj głos</button>";
                             echo "<span class='gap'></span>";
                             echo "<button class='button-bet2'>Oddaj głos</button>";
-                            //echo "<button class='button-back'>Cofnij głos</button>"
+                            echo "</div>";
                             echo "</div>";
                         }
                     }

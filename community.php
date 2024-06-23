@@ -53,7 +53,7 @@
                             <input type="hidden" name="nick" value=<?php echo $row->nick?>>
                             <input type="hidden" name="idWpisu" value=<?php echo $row->id ?>>
                             <div class="comment-container">
-                                <textarea name="tresc" class="input-comment" rows=2 cols=10></textarea>
+                                <textarea name="tresc" class="input-comment" rows=2 cols=10 required></textarea>
                                 <input type="submit" value="Dodaj komentarz" class="button-comment">
                             </div>    
                         </form>
