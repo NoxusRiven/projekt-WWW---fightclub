@@ -33,7 +33,7 @@ $(document).ready(function()
                 {
                     glos.text(data);
                     betDiv.find('.buttonDiv').remove();
-                    betDiv.append('<p>Już głosowałeś na '+ data +'</p>');
+                    betDiv.append('<p>Już głosowałeś na '+ glosowalNa +'</p>');
                 }
                 
             });
@@ -54,7 +54,7 @@ $(document).ready(function()
                 {
                     glos.text(data);
                     betDiv.find('.buttonDiv').remove();
-                    betDiv.append('<p>Już głosowałeś na ' + data + '</p>');
+                    betDiv.append('<p>Już głosowałeś na ' + glosowalNa + '</p>');
                 }
                 
             });

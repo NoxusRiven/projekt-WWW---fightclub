@@ -39,8 +39,8 @@
                 
             </form>
         </div>
-        <h2>Wasze osiągnięcia</h2>
         <div class="form">
+        <h2>Wasze osiągnięcia</h2>
             <?php
                 require("wyswietlOsiagniecia.php");
             ?>
