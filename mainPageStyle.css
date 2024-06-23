@@ -14,10 +14,10 @@ body
 
 header 
 {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1
@@ -101,7 +101,7 @@ footer
 {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer p 
@@ -247,3 +247,68 @@ footer p
 {
     background-color: #b96f08;
 }
+
+.menuDiv {
+    display: flex;
+    align-items: center;
+}
+
+.menuDiv .menuIcon {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.menuDiv h1 
+{
+    text-align: center;
+    padding: 0 10px;
+    flex: 1;
+}
+
+.menuContainer 
+{
+    position: relative;
+    display: inline-block; /* Zapewnia, że kontener dopasowuje się do jego zawartości */
+}
+
+  .menu-list 
+  {
+    display: none; /* Ukryj listę menu domyślnie */
+    list-style-type: none; /* Usuń standardowe punkty listy */
+    padding: 0;
+    margin: 0;
+    position: absolute; /* Ustawienie absolutne, aby nie wpływać na układ innych elementów */
+    background-color: rgba(0, 0, 0, 0.7); /* Tło listy menu */
+    border: 1px solid #000000; /* Obramowanie listy menu */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień dla estetyki */
+    z-index: 1000; /* Z-index dla wyższego układu w przypadku nakładania się innych elementów */
+    top: 70%; /* Umieszczamy listę menu pod zdjęciem */
+    right: 0;
+}
+  
+  .menu-list li {
+    padding: 10px;
+  }
+  
+  .menu-list li a {
+    color: #ee9922;
+    text-decoration: none;
+  }
+  
+  /* Animacja pojawiania się listy menu */
+  .menu-list.active {
+    display: block; /* Po kliknięciu ikonki pokaż listę menu */
+    animation: fadeIn 0.3s ease-in-out forwards; /* Animacja pojawiania się */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
