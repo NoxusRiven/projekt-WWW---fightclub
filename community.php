@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="menuScript.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mainPageStyle.css">
@@ -13,9 +15,17 @@
         require("database.php");
     ?>
     <header>
-        <p>Zalogowany jako: <?= $_SESSION["login"] ?></p>
-        <nav><a href="logout.php">Wyloguj</a></nav>
-        <h1>Fightclub</h1>
+    <div class="menuDiv">
+            <h1>Fightclub</h1>
+            <div class="menuContainer">
+            <img src="menu-icon.png" class="menuIcon" width="120" height="160">
+                <ul class="menu-list">
+                    <li><p>Zalogowany jako: <?= $_SESSION["login"] ?></p></li>
+                    <li><nav><a href="logout.php">Wyloguj</a></nav></li>
+                </ul>
+            </div>
+            
+        </div>
         <nav>
             <a href="index.php">Strona głowna</a>
             <a href="community.php" class="wybrany">Forum społecznościowe</a>
