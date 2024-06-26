@@ -15,7 +15,7 @@
         require("database.php");
     ?>
     <header>
-    <div class="menuDiv">
+        <div class="menuDiv">
             <h1>Fightclub</h1>
             <div class="menuContainer">
             <img src="menu-icon.png" class="menuIcon" width="120" height="160">
@@ -36,10 +36,26 @@
     </header>
     <main>
         <div class="form">
+            <form>
+                <input type="text" class="input" name="wyszukaj" placeholder="Wyszukaj komentarz po nicku">
+                <div class="buttons">
+                    <input type="submit" class="button" value="Wyszukaj">
+                    <a href="community.php" class="button-a">Cofnij filtr</a> 
+                </div>
+            </form>
+        </div>
+        <div class="form">
             <h1>Wpisy użytkowników</h1>
             <a href="addPostForm.php">Dodaj swój wpis</a>
             <?php
                 $sql = "SELECT id, nick, naglowek, tresc, data FROM wpisy";
+
+                if(isset($_GET["wyszukaj"]))
+                {
+                    $wyszukaj = $_GET["wyszukaj"];
+                    $sql .= " WHERE nick LIKE '%$wyszukaj%'";
+                }
+
                 $result = $conn->query($sql);
                 
                 if ($result->num_rows > 0) 

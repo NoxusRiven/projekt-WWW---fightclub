@@ -37,10 +37,26 @@
     </header>
     <main>
         <div class="form">
+            <form>
+                <input type="text" class="input" name="wyszukaj" placeholder="Wyszukaj glosowanie po imieniu walczacaego">
+                <div class="buttons">
+                    <input type="submit" class="button" value="Wyszukaj">
+                    <a href="bets.php" class="button-a">Cofnij filtr</a> 
+                </div>
+            </form>
+        </div>
+        <div class="form">
             <h1>Głosowanie zwycięsców walk</h1>
             <a href="addBetForm.php">Dodaj głosowanie</a>
             <?php
                 $sql = "SELECT id, osoba1, osoba2, liczbaGlosow1, liczbaGlosow2 FROM glosowanie";
+                
+                if (isset($_GET["wyszukaj"])) 
+                {
+                    $wyszukaj = $_GET["wyszukaj"];
+                    $sql .= " WHERE osoba1 LIKE '%$wyszukaj%' OR osoba2 LIKE '%$wyszukaj%'";
+                }
+                
                 $result = $conn->query($sql);
 
                     if($result->num_rows > 0)

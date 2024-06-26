@@ -121,13 +121,15 @@ footer p
     max-width: 800px;
 }
 
-.input {
+.input 
+{
     width: calc(60% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #dddddd;
     border-radius: 5px;
     box-sizing: border-box;
+    text-align: center;
 }
 
 .file 
@@ -143,7 +145,8 @@ footer p
 
 .button
 {
-    width: 50%;
+    width: 30%;
+    height: 40px;
     padding: 10px;
     background-color: #f0ad4e;
     border: none;
@@ -152,6 +155,21 @@ footer p
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.button-a
+{
+    width: 30%;
+    height: 20px;
+    padding: 10px;
+    background-color: #f0ad4e;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 .button:hover 
